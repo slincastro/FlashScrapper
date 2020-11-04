@@ -33,7 +33,7 @@ def write_speed():
 def in_minutes(minutes):
     return minutes * 60
 
-for i in range(10):
-    time.sleep(in_minutes(1))
+for i in range(200):
+    time.sleep(in_minutes(5))
     write_speed()
 

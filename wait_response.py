@@ -11,13 +11,12 @@ def to_mb(bytes):
 def get_speed():
     download_b = st.download()
     down_mb = to_mb(download_b)
-    print("down in MB" + str(down_mb))
-
     upload_b = st.upload()
-
     up_mb = to_mb(upload_b)
+    now = datetime.now()
+    date = now.strftime("%d/%m/%Y %H:%M:%S")
 
-    print("up in MB" + str(up_mb))
+    print("up in MB : " + str(up_mb) + " --  down in MB : " + str(down_mb) + " date : " + date )
 
     return up_mb, down_mb
 

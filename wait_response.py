@@ -6,9 +6,10 @@ from datetime import datetime
 st = speedtest.Speedtest()
 
 def to_mb(bytes):
-    return bytes/1000000
+    return round(bytes / (10 ** 6), 2)
 
 def get_speed():
+
     download_b = st.download()
     down_mb = to_mb(download_b)
     upload_b = st.upload()
